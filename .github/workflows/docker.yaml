@@ -17,3 +17,15 @@ jobs:
               run: |
                 node -v
                 cat /etc/os-release
+
+            - name: Container in a step
+              uses: docker://node18.16-alpine3.17
+              with:
+                entrypoint: /usr/local/bin/node
+                args: -p 2+3
+
+            - name: Container in a step
+              uses: docker://node18.16-alpine3.17
+              with:
+                args: -v
+
