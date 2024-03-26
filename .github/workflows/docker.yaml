@@ -24,7 +24,7 @@ jobs:
                 entrypoint: /usr/local/bin/node
                 args: -p 2+3
 
-            - name: Container in a step
+            - name: log version
               uses: docker://node18.16-alpine3.17
               with:
                 args: -v
